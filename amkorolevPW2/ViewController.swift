@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     private func setupSettingsButton() {
         let settingsButton = UIButton(type: .system)
         view.addSubview(settingsButton)
-        print("btn")
+        print("btn pushed")
         //settingsButton.setTitle("settings", for: .normal)
         settingsButton.setImage(UIImage(named: "settings")?.withRenderingMode(.alwaysOriginal), for: .normal)
         
