@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C8E148D274C1DE6007321EB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E148C274C1DE6007321EB /* SettingsViewController.swift */; };
 		1CFDB2CA27283F24001A81CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDB2C927283F24001A81CA /* AppDelegate.swift */; };
 		1CFDB2CC27283F24001A81CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDB2CB27283F24001A81CA /* SceneDelegate.swift */; };
 		1CFDB2CE27283F24001A81CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFDB2CD27283F24001A81CA /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C8E148C274C1DE6007321EB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1CFDB2C627283F24001A81CA /* amkorolevPW2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amkorolevPW2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CFDB2C927283F24001A81CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CFDB2CB27283F24001A81CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				1CFDB2C927283F24001A81CA /* AppDelegate.swift */,
 				1CFDB2CB27283F24001A81CA /* SceneDelegate.swift */,
 				1CFDB2CD27283F24001A81CA /* ViewController.swift */,
+				1C8E148C274C1DE6007321EB /* SettingsViewController.swift */,
 				1CFDB2D227283F28001A81CA /* Assets.xcassets */,
 				1CFDB2D427283F28001A81CA /* LaunchScreen.storyboard */,
 				1CFDB2D727283F28001A81CA /* Info.plist */,
@@ -137,6 +140,7 @@
 				1CFDB2CE27283F24001A81CA /* ViewController.swift in Sources */,
 				1CFDB2CA27283F24001A81CA /* AppDelegate.swift in Sources */,
 				1CFDB2CC27283F24001A81CA /* SceneDelegate.swift in Sources */,
+				1C8E148D274C1DE6007321EB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

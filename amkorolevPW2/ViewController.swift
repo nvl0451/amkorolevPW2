@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     private let settingsView = UIView()
     private let locationTextView = UITextView()
     private let locationManager = CLLocationManager()
+    let locationToggle = UISwitch()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +45,26 @@ class ViewController: UIViewController {
         settingsButton.widthAnchor.constraint(equalTo: settingsButton.heightAnchor).isActive = true
     }
     
+    private var buttonCount = 0
     @objc private func settingsButtonPressed() {
-        UIView.animate(withDuration: 0.2, animations: {self.settingsView.alpha = 1 - self.settingsView.alpha})
+        switch buttonCount {
+        case 0, 1:
+            UIView.animate(withDuration: 0.2, animations: {self.settingsView.alpha = 1 - self.settingsView.alpha})
+        case 2:
+            navigationController?.pushViewController(SettingsViewController(toggleIsOn: locationToggle.isOn), animated: true)
+        case 3:
+            let settingsCall = SettingsViewController(toggleIsOn: locationToggle.isOn)
+            settingsCall.completionToggle = { [weak self] toggleIsOn in
+                if (self?.locationToggle.isOn != toggleIsOn) {
+                    self?.locationToggle.isOn = toggleIsOn!
+                    self?.locationToggleSwitched(self!.locationToggle)
+                }
+            }
+            present(settingsCall, animated: true, completion: nil)
+        default:
+            buttonCount = -1
+        }
+        buttonCount += 1
     }
     
     private func setupSettingsView() {
@@ -74,7 +93,6 @@ class ViewController: UIViewController {
     }
     
     private func setUpLocationToggle() {
-        let locationToggle = UISwitch()
         settingsView.addSubview(locationToggle)
         
         locationToggle.translatesAutoresizingMaskIntoConstraints = false
